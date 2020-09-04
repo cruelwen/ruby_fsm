@@ -1,7 +1,7 @@
 # Finite State Machine in Ruby
 
 Example 1: Basic usage
-```
+```ruby
 require 'fsm'
 light = Fsm.new states: [:red, :green, :yellow],
   current: :red,
@@ -16,7 +16,7 @@ light.set :red # should raise a error
 ```
 
 Example 2: Async
-```
+```ruby
 require 'fsm'
 light = Fsm.new states: [:red, :green, :yellow],
   current: :red,
@@ -33,7 +33,7 @@ puts light.current # should be green
 ```
 
 Example 3: Using callback and inherit
-```
+```ruby
 class FsmTrafficLight < Fsm
   def default_setting
     {
